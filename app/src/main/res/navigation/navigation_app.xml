@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_app"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.badr_academy.android_navigation_architecture.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/to_acountFragment"
+            app:destination="@id/acountFragment" />
+        <action
+            android:id="@+id/to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acountFragment"
+        android:name="com.badr_academy.android_navigation_architecture.AcountFragment"
+        android:label="fragment_acount"
+        tools:layout="@layout/fragment_acount" >
+        <action
+            android:id="@+id/showArgFragment"
+            app:destination="@id/showArgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.badr_academy.android_navigation_architecture.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/showArgFragment"
+        android:name="com.badr_academy.android_navigation_architecture.ShowArgFragment"
+        android:label="fragment_show_arg"
+        tools:layout="@layout/fragment_show_arg" />
+</navigation>
